@@ -4,8 +4,163 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment-6</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+<style>
+.hover-tool {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.hover-tool .toolDesign {
+  visibility: hidden;
+  width: 90px;
+  height: 30px;
+  font-family: "Mulish", sans-serif;
+  background-color: #12132D;
+  color: #fff;
+  text-align: center;
+  border-radius: 1px;
+  padding-bottom:5px ;
+  padding-top: 5px;
+  
+  /* Position the hover-tool */
+  position: absolute;
+  z-index: 1;
+
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.hover-tool:hover .toolDesign {
+  visibility: visible;
+}
+</style>
+    
+</style>
 </head>
 <body>
-    <header><h1>Hello</h1></header>
+    <header>
+       
+        <!-- navbar -->
+     <nav class="mt-7 mb-7">
+        <div class="navbar justify-evenly  bg-base-100">
+            <div class="navbar-start ">
+             <div><h1 class="font-['Mulish'] font-extrabold text-3xl">ReTro</h1></div>
+            </div>
+            <div class="navbar-center">
+                <div class="navbar-end flex gap-4">
+                    <button class="btn  btn-circle">
+                    <img src="./images/home.svg" alt="">
+                    </button>
+                    <button  class=" btn btn-circle">
+                      
+                        <div class="hover-tool">
+                            
+                            <span class="toolDesign font-normal">Tooltip</span>
+                            <img src="./images/Frame.svg" alt="">
+                          </div>
+                       
+                       
+                     
+                    
+                  
+                    </button>
+                    <button class="btn  btn-circle">
+                        <img src="./images/contact.svg" alt="">
+                    </button>
+                    <button class="btn  btn-circle">
+                        <img src="./images/flag.svg" alt="">
+                    </button>
+                    
+                  </div>
+                  <div class="ml-4">
+                        <button class="btn btn-active bg-[#797DFC] text-white  font-['Mulish'] rounded-2xl w-[150px] p-2">Sign In</button>
+                  </div>
+            </div>
+            
+           
+          </div>
+
+     </nav>
+
+     <div class="flex justify-center">
+        <div class="hero w-3/4 h-[400px] bg-[url(./images/bgbanner.png)] bg-[#12132D] rounded-2xl">
+  <div class="hero-content flex-col lg:flex-row-reverse gap-8">
+      <div class="w-[250px] h-[200px] rounded-lg shadow-2xl bg-white text-[#12132DCC] font-['Mulish'] p-5 " >
+        <ul class="gap-3">
+            <li class="mb-3">Registered Users <span class="ml-5 ">01</span> </li> 
+            <li class="mb-3">Forum  <span class="ml-[98px]">05</span></li>
+            <li class="mb-3">Topics  <span class="ml-[99px]">05</span></li>
+            <li >Replies <span class="ml-[92px]">05</span> </li>
+        </ul>
+      </div>
+    <div class="">
+      <h1 class="text-5xl font-['Mulish'] font-extrabold text-white">Welcome to The <br> <span class="text-[#797DFC]">ReTro</span> Forum</h1>
+      <p class="py-3 text-[#FFFFFFCC] font-['Mulish']">Share your favorite opinion and win and wp <br> forum coffee mug!</p>
+      
+     <div class="flex"> 
+          <input class="w-[300px]  p-2 rounded-3xl outline-none " placeholder="Search Here" type="text">
+        <button class="  p-1 w-[110px] h-[35px] rounded-3xl  bg-[#797DFC] relative left-[-114px] top-[3px] text-white ">Search</button></div>
+    </div>
+  </div>
+  
+  <div>
+    
+   
+    
+</div>
+
+</div>
+
+
+     </div>
+    </header>
+    <main class="mt-14">
+        <div class="flex justify-center mb-3">
+            <h1 class="font-['Mulish'] font-extrabold text-4xl ">Lets Discuss</h1>
+            
+        </div>
+        <div class="flex justify-center text-[#12132D99] text-center">
+            <p>Yes, you can run unit tests and view the results directly within the app. The <br> 
+                integrated testing features allow for a streamlined .</p>
+        </div>
+
+        <!-- cards -->
+     
+        <div class="mt-16 ml-12 grid grid-flow-row grid-cols-1  ">
+            <div id="comments" class="card card-compact  flex gap-5 p-11">
+              
+              </div>
+           
+            
+          <!-- <div class="relative left-[650px] bottom-[320px]">
+            <div class="card w-96 h-[300px] bg-[#12132D0D] ">
+                
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title">Shoes!</h2>
+                  <p>If a dog chews shoes whose shoes does he choose?</p>
+                 
+                </div>
+              </div>
+        </div> -->
+       </div>
+       
+      
+
+    </main>
+    <footer>
+
+    </footer>
+    
+  <script src="script/interface.js"></script>  
 </body>
 </html>
