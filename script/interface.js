@@ -84,7 +84,7 @@ const forumInsert = (sections)=>{
     sections.forEach((section) =>{
     
     const forumCreate = document.createElement('div')
-    forumCreate.classList = "card card-compact lg:w-[600px] w-[300px] h-[300px] bg-[#F3F3F5] lg:p-11 p-3 lg:flex flex flex-col shadow-xl"
+    forumCreate.classList = "card card-compact lg:w-[600px] w-[300px] h-[300px] bg-[#F3F3F5] lg:p-11 p-3 lg:flex  flex-col shadow-xl"
    
 
 
