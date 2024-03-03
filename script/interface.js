@@ -4,7 +4,7 @@ const forum = async(searchNewpost = 'Comedy') => {
         const forumInfo = await fetch(`https://openapi.programming-hero.com/api/retro-forum/posts?category=${searchNewpost}`)
 
         const forumData = await forumInfo.json()
-        console.log(forumData)
+        // console.log(forumData)
         const Data = forumData.posts
       
         forumInsert(Data)
@@ -73,7 +73,7 @@ const gmail =(view_count)=> {
 
 
 const forumInsert = (sections)=>{
-    console.log(sections)
+    // console.log(sections)
     const forumSection = document.getElementById('comments')
     const newBtn = document.getElementById('seaarch-btn')
     
@@ -84,7 +84,7 @@ const forumInsert = (sections)=>{
     sections.forEach((section) =>{
     
     const forumCreate = document.createElement('div')
-    forumCreate.classList = "card card-compact w-[600px] h-[300px] bg-[#F3F3F5] p-11 flex shadow-xl"
+    forumCreate.classList = "card card-compact lg:w-[600px] w-[300px] h-[300px] bg-[#F3F3F5] lg:p-11 p-3 lg:flex flex flex-col shadow-xl"
    
 
 
@@ -103,7 +103,7 @@ const forumInsert = (sections)=>{
    <p class ="  "> ${section?.title}</p>
    <p class =" font-['Mulish'] font-light mt-3 mb-3"> ${section.description}</p>
    </div>
-    <div class="flex justify-evenly mt-4 ml-5">
+    <div class="flex justify-evenly lg:mt-4 ml-5">
     <p class="flex gap-2">  <img  src="/images/tabler-icon-message-2.svg" alt="">${section.comment_count}</p>
     <p class="flex gap-2">  <img  src="/images/icon.svg" alt="">${section.view_count
     }</p>
@@ -158,6 +158,54 @@ const toggleLoading = (isLoading) =>{
 
 forum()
 
+
+// Latest Post
+
+const latestPost = async()=>{
+    const post = await fetch('https://openapi.programming-hero.com/api/retro-forum/latest-posts')
+    console.log(post)
+    const newPost = await post.json()
+    console.log(newPost)
+    latestPoster(newPost)
+    
+}
+
+const latestPoster = (objects) =>{
+    console.log(objects)
+ const postUpdate = document.getElementById('latest-posts')
+ objects.forEach((object)=>{ 
+
+    const createPost = document.createElement('div')
+    createPost.classList = "card p-3 items-start gap-6 w-96 h-[550px] bg-[#FFF] border-[#12132D26] border-solid border-2 font-['Mulish']"
+    createPost.innerHTML =`
+    
+    <img class="rounded-2xl w-72 mt-3 ml-7 " src="${object.cover_image}" alt="">
+    <p class="flex gap-3"><img src="./images/dd.svg" alt="">${object.author.posted_date?object.author.posted_date:"No publish date"}</p>
+    <p class="font-['Mulish'] font-bold">${object.title}</p>
+    <p>${object.description}</p>
+    <div class="flex">
+    <div class="p-3">
+    <img class="w-8" src="${object.profile_image}" alt="">
+    </div>
+    <div class="">
+    <p>${object.author.name}</p>
+    <p>${object.author.designation ? object.author.designation:'Unknown'}</p>
+    </div>
+
+
+    </div>
+    
+    
+    `
+     console.log(createPost)
+    postUpdate.appendChild(createPost)
+
+ })
+}
+
+
+
+latestPost()
 
 
 
