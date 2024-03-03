@@ -108,8 +108,8 @@
       <p class="py-3 text-[#FFFFFFCC] font-['Mulish']">Share your favorite opinion and win and wp <br> forum coffee mug!</p>
       
      <div class="flex"> 
-          <input class="w-[300px]  p-2 rounded-3xl outline-none " placeholder="Search Here" type="text">
-        <button class="  p-1 w-[110px] h-[35px] rounded-3xl  bg-[#797DFC] relative left-[-114px] top-[3px] text-white ">Search</button></div>
+          <input id="searching" class="w-[300px]  p-2 rounded-3xl outline-none " placeholder="Search Here" type="text">
+        <button id="seaarch-btn" onclick="searchBtn()" class="  p-1 w-[110px] h-[35px] rounded-3xl  bg-[#797DFC] relative left-[-114px] top-[3px] text-white ">Search</button></div>
     </div>
   </div>
   
@@ -133,17 +133,17 @@
             <p>Yes, you can run unit tests and view the results directly within the app. The <br> 
                 integrated testing features allow for a streamlined .</p>
         </div>
-
+        <div id="loading-bar" class="text-center mt-3 hidden"><span class="loading loading-ring loading-lg"></span></div>
         <!-- cards -->
-     
-        <div class="mt-16 ml-12 grid grid-flow-row grid-cols-1  ">
-            <div id="comments" class="card card-compact  flex gap-5 p-11">
+       
+        <div class="mt-16 ml-12 grid  grid-cols-2  ">
+            <div id="comments" class="card card-compact  flex gap-12 p-11">
               
               </div>
            
             
-          <!-- <div class="relative left-[650px] bottom-[320px]">
-            <div class="card w-96 h-[300px] bg-[#12132D0D] ">
+          <div class="flex justify-center mt-12 ">
+            <div class="card w-96 h-[500px] bg-[#12132D0D] shadow-xl ">
                 
                 <div class="card-body items-center text-center">
                   <h2 class="card-title">Shoes!</h2>
@@ -151,7 +151,7 @@
                  
                 </div>
               </div>
-        </div> -->
+        </div>
        </div>
        
       
