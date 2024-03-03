@@ -51,13 +51,13 @@
     <header>
        
         <!-- navbar -->
-     <nav class="mt-7 mb-7">
-        <div class="lg:flex navbar lg:justify-evenly grid grid-cols-1 bg-base-100">
-            <div class="navbar-start ">
+     <nav class="mt-7 mb-7 lg:grid flex flex-col">
+        <div class=" navbar   lg:justify-evenly  bg-base-100">
+            <div class="lg:navbar-start ">
              <div class="flex"><img class="w-11" src="./images/forum-svgrepo-com.svg" alt=""><h1 class="font-['Mulish'] font-extrabold text-3xl">FunTimes</h1></div>
             </div>
-            <div class="navbar-center">
-                <div class="navbar-end flex gap-4">
+            <div class="navbar-center lg:flex  ">
+                <div class="navbar-end lg:flex gap-4 hidden">
                     <button class="btn  btn-circle">
                     <img src="./images/home.svg" alt="">
                     </button>
@@ -94,7 +94,7 @@
 
      <div class="flex justify-center">
         <div class="hero w-3/4 h-[400px] bg-[url(./images/bgbanner.png)] bg-[#12132D] rounded-2xl">
-  <div class="hero-content flex-col lg:flex-row-reverse gap-8">
+  <div class="hero-content items-start flex-col lg:flex-row-reverse  gap-8">
       <div class="w-[250px] h-[200px] rounded-lg shadow-2xl bg-white text-[#12132DCC] font-['Mulish'] p-5 " >
         <ul class="gap-3">
             <li class="mb-3">Registered Users <span class="ml-5 ">01</span> </li> 
@@ -104,11 +104,11 @@
         </ul>
       </div>
     <div class="">
-      <h1 class="text-5xl font-['Mulish'] font-extrabold text-white">Welcome to The <br> <span class="text-[#797DFC]">ReTro</span> Forum</h1>
-      <p class="py-3 text-[#FFFFFFCC] font-['Mulish']">Share your favorite opinion and win and wp <br> forum coffee mug!</p>
+      <h1 class="lg:text-5xl text-sm font-['Mulish'] font-extrabold text-white">Welcome to The <br> <span class="text-[#797DFC]">ReTro</span> Forum</h1>
+      <p class="lg:py-3 lg:text-sm text-xs   text-[#FFFFFFCC] font-['Mulish']">Share your favorite opinion and win and wp <br> forum coffee mug!</p>
       
-     <div class="flex"> 
-          <input id="searching" class="w-[300px]  p-2 rounded-3xl outline-none " placeholder="Search Here" type="text">
+     <div class="flex lg:mt-0 mt-5"> 
+          <input id="searching" class="lg:w-[300px] w-[240px]  p-2 rounded-3xl outline-none " placeholder="Search Here" type="text">
         <button id="seaarch-btn" onclick="searchBtn()" class="  p-1 w-[110px] h-[35px] rounded-3xl  bg-[#797DFC] relative left-[-114px] top-[3px] text-white ">Search</button></div>
     </div>
   </div>
@@ -157,9 +157,9 @@
 
         <div class="hero w-[1000px] h-[500px] bg-[#12132D] bg-[url(./images/joinforum.png)]  bg-no-repeat bg-[length:400px_300px] bg-right rounded-3xl mt-6">
           
-             <div class=" w-[380px] relative right-64 font-['Mulish'] " >
+             <div class=" w-[380px] relative right-64 font-['Mulish'] lg:block hidden " >
               <h1 class=" text-5xl font-['Mulish'] font-extrabold text-white mb-3">Join Our Forum</h1>
-              <p class="py-3 mb-3  text-[#FFFFFFCC] font-['Mulish']">Share your favorite opinion and win and wp forum coffee mug! Yes, you can <br> run unit tests and view the results directly within the app. </p>
+              <p class="py-3 mb-3  text-[#FFFFFFCC] font-['Mulish'] hide">Share your favorite opinion and win and wp forum coffee mug! Yes, you can <br> run unit tests and view the results directly within the app. </p>
               <button  class="  p-1 w-[190px] h-[35px] rounded-3xl  bg-[#797DFC]  text-white ">Register Now</button>
              </div>
 
@@ -184,7 +184,7 @@
         <div class="mt-24 ml-5">
           <div class="  ">
           
-            <div id="latest-posts" class=" lg:grid lg:grid-cols-3 flex flex-col  items-center ">
+            <div id="latest-posts" class=" lg:grid lg:grid-cols-3 flex flex-col  items-center gap-3 ">
         
        
             </div>
@@ -197,7 +197,7 @@
     <footer class="mt-10">
 
       <div class="">
-        <footer class="footer footer-center  lg:p-10 bg-base-200 lg:text-base-content rounded">
+        <footer class="footer footer-center  lg:p-10 bg-base-200 lg:text-base-content rounded p-4">
           <div class="lg:flex lg:w-[200px] w-[650px] justify-center items-center  relative lg:top-3 lg:right-2 right-32  "><img class="w-11" src="./images/forum-svgrepo-com.svg" alt=""><h1 class="font-['Mulish'] font-extrabold text-3xl">FunTimes</h1></div>
           <p class=" font-['Mulish'] font-normal lg:w-[600px] w-[150px] relative lg:left-0 lg:right-0 right-32" >Our websites purpose is to give you the old timey feeling.The good old days of internet forum. <br> Check out our social media for updated information</p>
           <nav>
