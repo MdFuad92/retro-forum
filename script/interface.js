@@ -1,5 +1,3 @@
-
-
 const forum = async(searchNewpost = 'Comedy') => {
  
     const newTime =  setTimeout(async()=>{
@@ -14,6 +12,63 @@ const forum = async(searchNewpost = 'Comedy') => {
   
     
 }
+
+// const sendForum = async()=>{
+//     const response = await fetch('https://openapi.programming-hero.com/api/retro-forum/posts')
+//     const api = await response.json()
+//     console.log(api)
+//     const info = api.posts
+//     console.log(info)
+//     newSection(info)
+// }
+// sendForum()
+
+// const newSection = (insertComment)=>{
+// console.log(insertComment)
+// const newComment = document.getElementById('btn-comment')
+
+//  insertComment.forEach((item)=>{
+  
+//    const newElement = document.createElement('div')
+//    newElement.classList = "font-['Mulish'] font-bold card w-72 h-[50px] bg-[white] shadow-xl"
+//    newElement.innerHTML =`
+//    <p class =" "> ${item?.title}</p>
+   
+//    `
+//    console.log(newElement)
+// //    newComment.appendChild(newElement)
+  
+//  })
+// }
+const newComment = document.getElementById('btn-comment')
+
+const email = (title)=>{
+   console.log('hello',)
+
+   
+   const creatComment = document.createElement('div')
+   
+   creatComment.classList = "flex  gap-4 p-2 font-['Mulish'] font-bold card w-72 h-[60px] bg-[white] shadow-xl"
+    creatComment.innerHTML = ` <div class =" "><p > ${title}</p></div>`
+    newComment.appendChild(creatComment)
+
+    const number =document.getElementById('value')
+    const newNum = number.innerText
+    console.log(newNum)
+    const latestNum = parseInt(newNum)
+   
+     const finalNum = latestNum + 1
+     console.log(latestNum)
+     number.innerText = finalNum 
+}
+
+const gmail =(view_count)=> {
+   const createView = document.createElement('div')
+   createView.innerHTML = ` <div class="flex" ><p class ="flex" > <img class= "" src="./images/icon.svg" alt=""> ${view_count}</p></div> `
+   newComment.appendChild(createView)
+
+}
+
 
 
 
@@ -53,7 +108,7 @@ const forumInsert = (sections)=>{
     <p class="flex gap-2">  <img  src="/images/icon.svg" alt="">${section.view_count
     }</p>
     <p class="flex gap-2">  <img  src="/images/icon2.svg" alt="">${section.comment_count}</p>
-    <button> <img class= "w-[25px] h-[25px]" src="./images/email 1.svg" alt=""></button>
+    <button onclick="email('${section.title}'), gmail('${section.view_count}')"  > <img class= "w-[25px] h-[25px]" src="./images/email 1.svg" alt=""></button>
     </div>
     
    
@@ -66,10 +121,11 @@ const forumInsert = (sections)=>{
   
     
     })
-    
+   
   
 
 }
+
 
 
 function searchBtn(){
