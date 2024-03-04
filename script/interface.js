@@ -90,7 +90,15 @@ const forumInsert = (sections)=>{
 
     forumCreate.innerHTML = `
     <div class ="flex gap-5 font-['Mulish']  font-bold">
-    <img class= "w-[72px] h-[72px]" src="${section.image}" alt="">
+   
+   
+   <div class="indicator">
+  <span class="indicator-item  badge ${section.isActive?"bg-green-400":"bg-red-400"}">
+  
+  </span>
+  <img class= "w-[72px] h-[72px] " src="${section.image}" alt="">
+   </div>
+   
    
    
     <p class" font-bold ">#${section.category}</p>
@@ -100,7 +108,7 @@ const forumInsert = (sections)=>{
     
     </div>
    <div class="text-start ml-20 mt-2 font-['Mulish'] font-bold"> 
-   <p class ="  "> ${section?.title}</p>
+   <p class ="  "> ${section.title}</p>
    <p class =" font-['Mulish'] font-light mt-3 mb-3"> ${section.description}</p>
    </div>
     <div class="flex justify-evenly lg:mt-4 ml-5">
