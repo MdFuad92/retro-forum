@@ -12,41 +12,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
-<style>
-.hover-tool {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
-}
-
-.hover-tool .toolDesign {
-  visibility: hidden;
-  width: 90px;
-  height: 30px;
-  font-family: "Mulish", sans-serif;
-  background-color: #12132D;
-  color: #fff;
-  text-align: center;
-  border-radius: 1px;
-  padding-bottom:5px ;
-  padding-top: 5px;
-  
-  /* Position the hover-tool */
-  position: absolute;
-  z-index: 1;
-
-  bottom: 100%;
-  left: 50%;
-  margin-left: -60px;
-}
-
-.hover-tool:hover .toolDesign {
-  visibility: visible;
-}
-</style>
-    
-</style>
 </head>
+
+
 <body>
     <header>
        
@@ -58,28 +26,35 @@
             </div>
             <div class="navbar-center lg:flex  ">
                 <div class="navbar-end lg:flex gap-4 hidden">
+                  <div class="tooltip" data-tip="Home">
                     <button class="btn  btn-circle">
-                    <img src="./images/home.svg" alt="">
-                    </button>
-                    <button  class=" btn btn-circle">
+                   <img src="./images/home.svg" alt="">
                       
-                        <div class="hover-tool">
-                            
-                            <span class="toolDesign font-normal">Tooltip</span>
-                            <img src="./images/Frame.svg" alt="">
-                          </div>
-                       
-                       
+                   </button>
+                  </div>
+                  <div class="tooltip" data-tip="Frame">
+                    <button class="btn  btn-circle">
+                   <img src="./images/Frame.svg" alt="">
+                      
+                   </button>
+                  </div>
                      
-                    
-                  
                     </button>
-                    <button class="btn  btn-circle">
-                        <img src="./images/contact.svg" alt="">
-                    </button>
-                    <button class="btn  btn-circle">
-                        <img src="./images/flag.svg" alt="">
-                    </button>
+                   
+                      <div class="tooltip" data-tip="Contact">
+                        <button class="btn  btn-circle">
+                       <img src="./images/contact.svg" alt="">
+                          
+                       </button>
+                      </div>
+                        
+                   
+                      <div class="tooltip" data-tip="Flag">
+                        <button class="btn  btn-circle">
+                       <img src="./images/flag.svg" alt="">
+                          
+                       </button>
+                      </div>
                     
                   </div>
                   <div class="lg:ml-4">
@@ -143,7 +118,7 @@
            
            
           <div class="flex justify-center mt-12 ">
-            <div class="card lg:w-96 w-72 h-[500px] bg-[#12132D0D] shadow-xl ">
+            <div class="card lg:w-[500px] w-72 h-[500px] bg-[#12132D0D] shadow-xl ">
                 <div class="mt-3 flex justify-around font-['Mulish'] font-bold" ><h3>Title</h3> <p>Mark as Read (<span id="value">0</span>)</p></div>
                 <div  id="btn-comment" class="card-body items-center text-center">
                   
@@ -196,7 +171,7 @@
     </main>
     <footer class="mt-10">
 
-      <div class="max-w-screen-sm lg:max-w-screen-2xl flex items-center ">
+      <div class="w-[430px] lg:w-full flex items-center ">
         <footer class="footer footer-center    lg:p-10 bg-base-200 lg:text-base-content rounded p-4">
           <div class="lg:flex lg:w-[200px] w-[10px] justify-center items-center   "><img class="w-11" src="./images/forum-svgrepo-com.svg" alt=""><h1 class="font-['Mulish'] font-extrabold text-3xl">FunTimes</h1></div>
           <p class=" font-['Mulish'] font-normal lg:w-[600px] w-[260px] " >Our websites purpose is to give you the old timey feeling. Check out our social media for updated information</p>

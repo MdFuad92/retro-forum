@@ -47,9 +47,9 @@ const email = (title)=>{
 
    
    const creatComment = document.createElement('div')
-   
-   creatComment.classList = "flex  gap-4 p-1 font-['Mulish'] font-bold card w-[370px] h-[60px] bg-[white] shadow-xl"
-    creatComment.innerHTML = ` <div class ="flex "><p class="w-[300px]  "> ${title}</p><img class="mr-3 mb-8" src="/images/icon.svg"</div>`
+   let text = "Introduction to Python: A Beginner's Guide"
+   creatComment.classList = " flex   gap-4 p-1 items-center font-['Mulish'] font-bold  card w-[480px] h-[60px] bg-[white] shadow-xl"
+    creatComment.innerHTML = ` <div class ="  "><p class=" flex gap-2 items-center "> ${title}<img class=" " src="/images/icon.svg"</p></div>`
     newComment.appendChild(creatComment)
 
     const number =document.getElementById('value')
@@ -116,7 +116,7 @@ const forumInsert = (sections)=>{
     <p class="flex gap-2">  <img  src="/images/icon.svg" alt="">${section.view_count
     }</p>
     <p class="flex gap-2">  <img  src="/images/icon2.svg" alt="">${section.comment_count}</p>
-    <button onclick="email('${section.title},   ${section.view_count}')"  > <img class= "w-[25px] h-[25px]" src="./images/email 1.svg" alt=""></button>
+    <button onclick="email('${section.title},    ${section.view_count}')"  > <img class= "w-[25px] h-[25px]" src="./images/email 1.svg" alt=""></button>
     </div>
     
    
